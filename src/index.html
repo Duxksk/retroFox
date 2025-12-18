@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Retro Fox</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+
+<div id="titlebar">
+  🦊 Retro Fox
+</div>
+
+<div id="menubar">
+  파일(F)  편집(E)  보기(V)  기록(H)  북마크(B)  도구(T)  도움말(H)
+</div>
+
+<div id="toolbar">
+  <button class="tb" onclick="back()">◀</button>
+  <button class="tb" onclick="forward()">▶</button>
+  <button class="tb" onclick="reload()">⟳</button>
+  <button class="tb" onclick="home()">⌂</button>
+
+  <select id="year" class="tb" onchange="changeYear(this.value)">
+    <option value="20010101000000">2001</option>
+    <option value="20030101000000">2003</option>
+    <option value="20050101000000" selected>2005</option>
+  </select>
+
+  <input id="address" onkeydown="enter(event)">
+  <button class="tb" onclick="newTab()">＋</button>
+</div>
+
+<div id="tabs"></div>
+
+<div id="banner" hidden>
+  ⚠ 이 페이지는 보존된 기록이 없어 최신 사이트로 열렸습니다.
+</div>
+
+<!-- 탭별 iframe 영역 -->
+<div id="views"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

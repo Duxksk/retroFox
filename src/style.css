@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Tahoma, 굴림;
+  background: #ECE9D8;
+  color: black;
+}
+
+#titlebar {
+  background: linear-gradient(#0A246A, #3A6EA5);
+  color: white;
+  padding: 6px 10px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+#menubar {
+  background: #ECE9D8;
+  border-bottom: 1px solid #ACA899;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+#toolbar {
+  background: linear-gradient(#F1EFE2, #D6D2C2);
+  border-bottom: 1px solid #ACA899;
+  padding: 4px;
+  display: flex;
+  gap: 4px;
+}
+
+.tb {
+  background: linear-gradient(#FFFFFF, #D4D0C8);
+  border: 1px solid #7F9DB9;
+  padding: 2px 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tb:active { background: #C0C0C0; }
+
+#address {
+  flex: 1;
+  border: 1px solid #7F9DB9;
+  padding: 2px;
+  font-size: 12px;
+}
+
+#tabs {
+  display: flex;
+  background: #D4D0C8;
+  border-bottom: 1px solid #ACA899;
+}
+
+.tab {
+  background: linear-gradient(#F8F7F1, #D4D0C8);
+  border: 1px solid #ACA899;
+  border-bottom: none;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 2px;
+}
+
+.tab.active {
+  background: #FFFFFF;
+  font-weight: bold;
+}
+
+.tab span {
+  margin-left: 6px;
+  color: darkred;
+  cursor: pointer;
+}
+
+#banner {
+  background: #FFF1A8;
+  border-bottom: 1px solid #ACA899;
+  padding: 4px;
+  font-size: 12px;
+}
+
+iframe {
+  width: 100%;
+  height: calc(100vh - 160px);
+  border: none;
+  background: white;
+}

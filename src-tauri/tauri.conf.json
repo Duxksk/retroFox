@@ -1,7 +1,7 @@
 {
   "build": {
-    "devPath": "../src",      // src 폴더가 루트 기준으로 존재하면 이대로 가능
-    "distDir": "../src"       // 빌드 산출물을 src 폴더 안으로 지정
+    "devPath": "../src",
+    "distDir": "../src"
   },
   "package": {
     "productName": "Retro Fox",

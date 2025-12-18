@@ -1,0 +1,37 @@
+name: Build Retro Fox
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          path: retroFox
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install npm dependencies
+        run: npm install
+        working-directory: ./retroFox
+
+      - name: Build Retro Fox
+        run: npm run build
+        working-directory: ./retroFox
+
+      - name: Upload MSI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: RetroFox
+          path: ./retroFox/src-tauri/target/release/bundle/msi/*.msi
